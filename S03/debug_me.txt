@@ -1,0 +1,5 @@
+By debugging I found out that the second print gives numbers that when they are executed in the functions cause t1 to be 0.
+Then it divides t0 / t1 producing a ZerDivisionError. Is as simple as that.
+
+The error is in the line 11 , inside the function.
+This happens when c and d take the same value of function f.
