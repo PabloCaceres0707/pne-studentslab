@@ -62,14 +62,14 @@ bases = {"A": 0, "C": 0, "G": 0, "T": 0}
 for sequence in txt_list:
     sequence = sequence.strip()
     total_number += len(sequence)
+    result = count_bases_files(sequence)
 
-for sequence in txt_list:
-    total_number += len(sequence)
-
-    for base in sequence:
-        if base in bases:
-            bases[base] += 1
+    for key in result:
+        bases[key] += result[key]
 
 print("Total number of bases:", total_number)
+
+for base, count in bases.items():
+    print(f'{base}: {count}')
 
 
