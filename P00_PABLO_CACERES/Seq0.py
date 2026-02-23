@@ -39,3 +39,32 @@ def seq_count(files,bases):
             dict[names][gene] = genes.count(gene)
 
     return dict
+
+
+def seq_reverse(seq, n):
+    seq_reversed = seq[0:n]
+    return seq_reversed[::-1]
+
+def seq_complement(sequence, n):
+    sequence_new = sequence[0:n]
+    sequence_c = ""
+
+    for base in sequence_new:
+        if base == 'T':
+            sequence_c += "A"
+        elif base == 'A':
+            sequence_c += "T"
+        elif base == 'G':
+            sequence_c += "C"
+        elif base == 'C':
+            sequence_c += "G"
+        else:
+            sequence_c += base
+
+    return sequence_c
+
+
+def most_frequent_base(seq):
+    bases = ["A", "T", "C", "G"]
+    counts = {base: seq.count(base) for base in bases}
+    return max(counts, key=counts.get)
