@@ -84,3 +84,10 @@ class Seq:
         body = "\n".join(file_contents[1:])
         self.strbases = body
         return self.strbases
+
+    def frequency(self):
+        if self.strbases in ("NULL", "ERROR!"):
+            return "Not valid sequence"
+
+        bases = self.count()
+        return max(bases, key=bases.get)
