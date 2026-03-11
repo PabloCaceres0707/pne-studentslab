@@ -91,21 +91,3 @@ class Seq:
 
         bases = self.count()
         return max(bases, key=bases.get)
-
-    def info(self):
-        if self.strbases == "NULL" or self.strbases == "ERROR":
-            return "Sequence: " + self.strbases
-
-        total_len = self.len()
-        counts = self.count()
-
-        res = f"Sequence: {self.strbases}\n"
-        res += f"Total length: {total_len}"
-
-        for base in ['A', 'C', 'G', 'T']:
-            count = counts[base]
-
-            percentage = (count / total_len) * 100 if total_len > 0 else 0
-            res += f"\n{base}: {count} ({percentage:.1f}%)"
-
-        return res
