@@ -9,3 +9,4 @@ print(f"Fragment: {fragment}")
 
 reverse_fragment = seq_reverse(fragment, 20)
 print(f"Reverse: {reverse_fragment}")
+

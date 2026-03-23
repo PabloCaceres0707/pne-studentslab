@@ -1,8 +1,7 @@
-FOLDER = "Sequences/"
-FILENAME = "U5.fa"
+file = "Sequences/U5.fa"
 
 
 from Seq0 import seq_read_fasta
-file = FOLDER + FILENAME
-print("The filename is: ", FILENAME,"\nThe first 20 bases are:", seq_read_fasta(file)[0: 20])
+
+print("The filename is: ", file,"\nThe first 20 bases are:", seq_read_fasta(file)[0: 20])
 
